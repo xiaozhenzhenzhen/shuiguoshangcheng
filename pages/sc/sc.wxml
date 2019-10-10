@@ -1,0 +1,15 @@
+<!-- 添加记录 -->
+<text class="p" wx:if="{{counterId}}">新增的记录 _id 为：{{counterId}}</text>
+介绍 <input type="text" bindinput="onchange"></input>
+价格<input type="text"  bindinput="change"></input>
+图片地址： <input type="text" bindinput="cc"></input>
+预售时间： <input type="text" bindinput="time"></input>
+提货时间：  <input type="text" bindinput="taketime"></input>
+已售份： <input type="text" bindinput="sellnum"></input>
+图片1：  <input type="text" bindinput="picOne"></input>
+图片2：  <input type="text" bindinput="picsecond"></input>
+图片3：  <input type="text" bindinput="picthree"></input>
+图片4：  <input type="text" bindinput="picfour"></input>
+图片5：  <input type="text" bindinput="picfive"></input>
+<button size="mini" type="default" bindtap="onAdd">新增记录</button>
+<view bindtap="selectAll">查询集合myproduct所有记录</view>

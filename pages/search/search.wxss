@@ -1,0 +1,108 @@
+/* pages/search/search.wxss */
+.search-div{
+  display: flex;
+  border-bottom:1px solid #ccc;
+  padding-top:25rpx;
+  width:100%;
+  height:80rpx;
+  background:#fff;
+  margin-top:10rpx;
+  margin-bottom: 20rpx;
+}
+.searchbox{
+  background:#efefef;
+  width:500rpx;
+  height:60rpx;
+  margin-left:70rpx;
+  border-radius: 35rpx;
+  padding-left:50rpx;
+  font-size:25rpx;
+}
+.glass{
+  position: absolute;
+  width:30rpx;
+  height:30rpx;
+  left:80rpx;
+  top:44rpx;
+  z-index: 999;
+}
+.searchtext{
+  position: absolute;
+  font-size:30rpx;
+  margin-top:-10rpx;
+  margin-left:620rpx;
+}
+
+
+/* pages/home/home.wxss */
+.all{
+  width:100%;
+  height:798rpx;
+  background:#cdcdcd;
+}
+.product{
+  position:relative;
+  margin-top:-30rpx;
+  margin-left:20rpx;
+  margin-bottom:20rpx;
+  width:95%;
+  height:750rpx;
+  background:#fff;
+}
+.vender{
+  font-size:28rpx;
+  margin-left:230rpx;
+}
+.product1{
+  width:712rpx;
+  height:400rpx;
+}
+.taglines{
+  border-right:3rpx solid #707070;
+  padding: 13rpx;
+  padding-right:30rpx;
+  margin-top:30rpx;
+  font-size: 35rpx;
+  font-weight: 800;
+}
+.btmline{
+  width:95%;
+  height:90rpx;
+  border-bottom:3rpx solid #cdcdcd;
+  margin-left:15rpx;
+}
+.num{
+  font-size:30rpx;
+  color:red;
+}
+.focus{
+  font-size:25rpx;
+}
+.num-focus{
+  text-align: center;
+  margin-left:580rpx;
+  margin-top:-55rpx;
+}
+.presell,.take{
+  font-size:23rpx;
+  color:red;
+}
+.shooped{
+  font-size:30rpx;
+  margin-left:130rpx;
+}
+.price{
+  position:absolute;
+  margin-top:100rpx;
+}
+.car{
+  color:#fff;
+  background:red;
+  width:250rpx;
+  height:60rpx;
+  border:1rpx solid red;
+  border-radius:30rpx;
+  line-height: 60rpx;
+  margin-left:400rpx;
+  margin-top:100rpx;
+}

@@ -1,0 +1,5 @@
+<!--pages/login/login.wxml-->
+<view class="view-login">
+   <image class="loginimg" src="../../images/login.png"></image>
+   <button class='btnlogin' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+</view>

@@ -1,0 +1,36 @@
+ <view class="mycarAll">
+<view style="height:20rpx"></view>
+  <view class="list" wx:for="{{mycar}}" wx:key="index">
+    <view style="height:10rpx;background:#efefef"></view>
+    <!-- <text class="gou" bindtap='check'>√</text> -->
+    <!-- <checkbox checked="{{select?'check':''}}" class="gou"></checkbox> -->
+    <icon bindtap='selectlist' data-index="{{index}}" wx:if="{{item.selected}}" class='gou' type="success" color="red"  />
+    <icon bindtap='unselectlist' data-index="{{index}}" wx:else type="circle" class='gou'  />
+    <image class="productimg" src="{{item.pic}}"></image>
+    <text class="title">{{item.title}}</text>
+    <text class="num">1包</text>
+    <view class="price">￥<text style="color:red;font-size:40rpx">{{item.cc}}</text></view>
+    <view class="delete" bindtap='deleted'  data-id="{{item._id}}">+</view>
+    <view class="btn">
+      <text class="reduce" bindtap="minusCount" data-index="{{index}}">-</text>
+      <text class="sum">{{item.num}}</text>
+      <text class="add" bindtap="addCount" data-index="{{index}}">+</text>
+    </view>
+  </view>
+</view>
+<van-submit-bar
+  price="{{total}}"
+  button-text="提交订单"
+  bind:submit="onSubmit"
+/>
+<!-- 底部操作栏 -->
+<!-- <view class='cart-bottom'>
+  <!-- wx:if 是否全选显示不同图标 -->
+  <!--<icon wx:if="{{selectAllStatus}}" class='cart-iconAll' type="success_circle" color="red" bindtap="selectAll" />
+  <icon wx:else type="circle" class='cart-iconAll' color="#ff7100" bindtap="selectAll" />
+  <text class='cart-allSelect' bindtap="selectAll">全选</text>
+  <!-- 总价 -->
+  <!--<text class='cart-allPrice'>合计:</text>
+  <text class='allPrice'>￥{{total}}</text>
+  <button class='btn-red' bindtap='toBuy' form-type='submit'>去结算</button>
+</view> -->

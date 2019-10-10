@@ -1,0 +1,30 @@
+<!--pages/search/search.wxml-->
+<view class="search-div">
+    <image class="glass" src='../../images/seach.png'></image>
+    <input autofocus="autofocus" placeholder='输入商品关键字或名称，搜索商品' class="searchbox"  bindinput="dim"></input><button class="searchtext" bindtap='check' >搜索</button>
+</view>
+
+
+<view class="all"  wx:for="{{search_list}}" wx:key="index">
+  <view style="height:20rpx"></view>
+    <view class="product">
+      <view class="vender">本产品由品典果专供</view>
+        <button bindtap="jumpComment">
+          <image class="product1" src="{{item.pic}}"></image>
+        </button>
+      <view class="btmline">
+        <text class="taglines">{{item.title}}</text>
+        <view class="num-focus">
+          <view class="num">3.6万</view>
+          <view class="focus">关注人数</view>
+        </view>
+        <view style="margin-top:20rpx">
+          <text class="presell">预售时间</text><text class="take">{{item.time}}</text>
+          <text class="shooped">已售<text style="color:red">{{item.sellnum}}</text>份/限量8000份</text>
+        </view>
+        <text  class="presell">提货时间：</text><text class="take">{{item.taketime}}</text>
+      </view>
+      <text class="price" style="color:red;font-size:35rpx">￥<text style="font-size:40rpx;color:red">{{item.cc}}</text></text>
+      <button class="car">加入购物车</button>
+    </view>
+  </view>

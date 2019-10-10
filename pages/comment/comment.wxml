@@ -1,0 +1,106 @@
+<!--pages/comment/comment.wxml-->
+<van-tabs active="{{ active }}" bind:change="onChange">
+  <van-tab title="基本信息">
+   <view class="outbox">
+    <!-- <image class="titleImg" src="cloud://web-test-01-mweu5.7765-web-test-01-mweu5/1564659803775.png">
+      <view class="topmy"  bindtap="jumpHome">
+        <image class="topimg" src="cloud://web-test-01-mweu5.7765-web-test-01-mweu5/1564660644013.png"></image>
+      </view>
+      <view class="tophome">
+        <image class="homeimg" src="cloud://web-test-01-mweu5.7765-web-test-01-mweu5/1564661635490.png"></image>
+      </view>
+    </image> -->
+    <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" id="titleImg">
+      </image>
+    </swiper-item>
+  </block>
+</swiper>
+<view style="display:none">
+<button bindtap="changeIndicatorDots"> indicator-dots </button>
+<button bindtap="changeAutoplay"> autoplay </button>
+<slider bindchange="intervalChange" show-value min="500" max="2000"/>
+<slider bindchange="durationChange" show-value min="1000" max="10000"/>
+</view>
+      <view class="topmy"  bindtap="jumpHome">
+        <image class="topimg" src="cloud://web-test-01-mweu5.7765-web-test-01-mweu5/1564660644013.png"></image>
+      </view>
+      <view class="tophome" bindtap="jumpmy">
+        <image class="homeimg" src="cloud://web-test-01-mweu5.7765-web-test-01-mweu5/1564661635490.png"></image>
+      </view>
+    <view class="redbg"><text style="font-size:30rpx;margin-left:20rpx">￥</text>{{data.cc}}<text class="yuanjia">￥3</text></view>
+    <view class="yellowbg">
+    </view>
+    
+      <view class="tishi-time">
+        <view class="tishi">距兴盛优选开始还剩：</view>
+        <text class="time">53：38：25</text>
+      </view>
+    <view class="imgbottom">
+      <view class="btmline">
+        <text class="taglines">{{data.title}}</text>
+        <text class="feel">皮薄，肉质细腻，果实饱满。</text>
+        <view class="num-focus">
+        <text class="focus">关注人数</text>
+        <text class="num">3.6万</text>
+      </view>
+      <view class="selltime">
+        <view style="margin-top:20rpx">
+          <text class="presell">预售时间：</text><text class="take">{{data.time}}</text>
+          <text class="shooped">已售<text style="color:red">5604</text>份/限量8000份</text>
+        </view>
+        <text  class="presell">提货时间：</text><text class="take">{{data.taketime}}</text>
+      </view>
+    </view>
+   </view>
+    <view class="add-subtract">
+      <text class="shuliang">数量</text>
+      <text class="add">-</text>
+      <text class="count">1</text>
+      <text class="subtract">+</text>
+    </view>
+    <view class="details">
+      <view>
+        <view style="width:100%;height:30rpx"></view>
+        <view class="spxq">商品详情</view>
+        <text class="left1">供应商：盛泰农产品</text>
+        <text class="right1">品牌：</text>
+        <text class="left2">规格：1份</text>
+        <text class="right2">产地：中国</text>
+      </view>
+      <view class="spxq" style="margin-top:40rpx">图文详情</view>
+      <view class="twxq">强烈推荐：肉甜多汁，肉质新嫩</view>
+      <view class="twxq">是大家喜爱的传统水果之一，即可鲜食，又可以制成罐头，果脯，全年食用</view>
+      <view class="twxq">存储方式：冷制保鲜，尽快食用</view>
+      <image style="width:95%;margin-top:50rpx" src="{{data.picOne}}"></image>
+      <image style="width:95%" src="{{data.picsecond}}"></image>
+      <image style="width:95%" src="{{data.picthree}}"></image>
+      <image style="width:95%" src="{{data.picfour}}"></image>
+    </view>
+    <view style="height:20rpx;width:100%;background:#efefef"></view>
+    <view class="gowuzhinang">
+      <view class="gwzntitle">兴盛优选购物指南</view>
+      <view class="triangle"></view>
+      <view class="stepout">
+        <view class="step">1.在线付款</view>
+        <view class="step1">提交订单，微信支付付款</view>
+        <view class="step">2.等待收货</view>
+        <view class="step1">成功付款后，我们将及时安排发货</view>
+        <view class="step">3.门店提货</view>
+        <view class="step1">发货后，在发货时间到所在门店自提</view>
+      </view>
+    </view>
+    <view class="tabbar">
+      <view class="gwc"><image class="gwcimg" src="cloud://web-test-01-mweu5.7765-web-test-01-mweu5/1564736149885.png"></image></view>
+      <text class="addcar">加入购物车</text>
+      <text class="buy">立即购买</text>
+    </view>
+   </view>
+  </van-tab>
+  
+  
+  <van-tab title="购买记录">内容 2</van-tab>
+</van-tabs>

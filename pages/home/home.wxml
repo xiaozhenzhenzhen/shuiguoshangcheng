@@ -1,0 +1,59 @@
+<!--pages/home/home.wxml-->
+<view class="all">
+  <view style="height:20rpx"></view>
+  <view class="topTitle">
+    <image class="titleImg" src="cloud://web-test-01-mweu5.7765-web-test-01-mweu5/1564653719303.jpg"></image>
+    <view class="second-div">
+      <view class="dizhi">花都越秀兴盛店</view>
+      <text class="fuwuyu">物美价廉，贴心服务，无忧售后...</text>
+    </view>
+    <view class="fence">
+      <view class="font1">4566</view>
+      <text class="font">粉丝人数</text>
+    </view>
+    <view class="goumai">
+      <view class="font2">9.9万</view>
+      <text class="font">购买指数</text>
+    </view>
+  </view>
+  <view class="search-div">
+    <image class="glass" src='../../images/seach.png'></image>
+    <button class="searchbox" bindtap='jumsearch'><text class="sssp">搜索商品</text></button>
+  </view>
+
+  <view class="all"  wx:for="{{list}}" wx:key="index">
+  <view style="height:20rpx"></view>
+    <view class="product">
+      <view class="vender">本产品由品典果专供</view>
+        <button bindtap="jumpComment" data-id="{{item._id}}">
+          <image class="product1" src="{{item.pic}}"></image>
+        </button>
+      <view class="btmline">
+        <text class="taglines">{{item.title}}</text>
+        <view class="num-focus">
+          <view class="num">3.6万</view>
+          <view class="focus">关注人数</view>
+        </view>
+        <view style="margin-top:20rpx">
+          <text class="presell">预售时间</text><text class="take">{{item.time}}</text>
+          <text class="shooped">已售<text style="color:red">{{item.sellnum}}</text>份/限量8000份</text>
+        </view>
+        <text  class="presell">提货时间：</text><text class="take">{{item.taketime}}</text>
+      </view>
+      <text class="price" style="color:red;font-size:35rpx">￥<text style="font-size:40rpx;color:red">{{item.cc}}</text></text>
+
+     <view class="btn">
+      <text class="reduce" bindtap="minusCount" data-index="{{index}}">-</text>
+      <text class="sum">{{item.isCar? item.num : 0}}</text>
+      <text class="add" bindtap="addCount" data-index="{{index}}" data-sum='{{sum[index]}}'>+</text>
+     </view>
+
+
+      <view class="btncircle" style="z-index:{{item.isCar?'-1':'999'}}">
+        <button class="car"  bindtap="pulsh"  data-id="{{item._id}}">加入购物车</button>
+        <!-- <text class="circle" bindtap='count' data-index="{{index}}">{{item.num}}</text> -->
+      </view>
+      
+    </view>
+  </view>
+</view>

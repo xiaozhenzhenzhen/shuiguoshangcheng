@@ -1,0 +1,3 @@
+<!--pages/db/db.wxml-->
+<text>pages/db/db.wxml</text>
+<view bindtap="addData">向集合中添加数据</view>

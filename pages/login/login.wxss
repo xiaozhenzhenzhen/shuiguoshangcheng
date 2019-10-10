@@ -1,0 +1,21 @@
+/* pages/login/login.wxss */
+.view-login{
+  width:100%;
+  height:1000rpx;
+  text-align: center;
+}
+.loginimg{
+  width:300rpx;
+  height:300rpx;
+  margin-top:200rpx;
+}
+.btnlogin{
+  width:90%;
+  height:100rpx;
+  background:#f20;
+  border-radius: 50rpx;
+  color:#fff;
+  font-weight: 600rpx;
+  margin-top:200rpx;
+
+}

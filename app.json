@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/db/db",
+    "pages/comment/comment",
+    "pages/search/search",
+    "pages/mycar/mycar",
+    "pages/my/my",
+    "pages/login/login",
+    "pages/sc/sc",
+    "pages/exam/exam"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f20",
+    "navigationBarTitleText": "小珍珍",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar":{
+    "color":"#2c2c2c",
+    "selectedColor":"#d81e06",
+    "list":[
+      {
+        "pagePath":"pages/home/home",
+        "text":"首页",
+        "iconPath":"images/home.png",
+        "selectedIconPath":"images/home_active.png"
+      },
+      {
+        "pagePath": "pages/mycar/mycar",
+        "text": "购物车",
+        "iconPath": "images/car.png",
+        "selectedIconPath": "images/car_active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/myfa.png",
+        "selectedIconPath": "images/myfa_active.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+<!--pages/my/my.wxml-->
+<view class="all">
+  <view class="title">
+    <text>个人中心</text>
+  </view>
+  <view class="userimg">
+     <image src="{{usermsg.avatarUrl}}" class="headimg"></image><text class="uname">{{usermsg.nickName}}</text>
+  </view>
+  <view class="orderForm">
+    <image class="ddimg" src="cloud://web-test-01-mweu5.7765-web-test-01-mweu5/1564803990143.png"></image>
+    <text class="ddtext">全部订单</text>
+    <text class="greater"></text>
+  </view>
+  <view class="orderForm">
+    <image class="ddimg" src="cloud://web-test-01-mweu5.7765-web-test-01-mweu5/1564805378976.png"></image>
+    <text class="ddtext">未付款</text>
+    <text class="greater"></text>
+  </view>
+  <view class="orderForm">
+    <image class="ddimg" src="cloud://web-test-01-mweu5.7765-web-test-01-mweu5/1564805644714.png"></image>
+    <text class="ddtext">待提货</text>
+    <text class="greater"></text>
+  </view>
+  <view class="orderForm">
+    <image class="ddimg" src="cloud://web-test-01-mweu5.7765-web-test-01-mweu5/1564805457431.png"></image>
+    <text class="ddtext">已提货</text>
+    <text class="greater"></text>
+  </view>
+  <button class="goshoop" bindtap='goshooping'>去购物</button>
+  <button class="quit" bindtap="quitlogin">退出当前账号</button>
+</view>
+
+
+<view class="login" style="display:{{isHide ? 'none' : 'block' }}">
+   <image style="margin-left:50rpx" src="cloud://web-test-01-mweu5.7765-web-test-01-mweu5/1565088393870.jpg"></image>
+   <input class="phone" type="text" placeholder='请输入您的手机号'></input>
+   <input class="upwd" type="password" placeholder='请输入收到的验证码'></input>
+   <text class="getyzma">获取验证码</text>
+   <button class="btn">登录</button>
+   <view class="qitalogin">--------其它登录方式--------</view>
+   <image class="weixin" bindtap="jump" src="../../images/weixin.png"></image>
+   <text class="weixintext">微信绑定手机登录</text>
+</view>
